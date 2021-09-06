@@ -34,10 +34,10 @@ function init() {
 		waves: 20.0,
 		complex: 0.1,
 		displace: 0.1,
-		eqcolor: 4.0,
+		eqcolor: 10.0,
 		rcolor: 1.5,
-		gcolor: 0.7,
-		bcolor: 1.5,
+		gcolor: 1.5,
+		bcolor: 2.5,
 		ease: Quart.easeInOut
 	}, secondDelay/1000);
 	tl.to(options.perlin, {
@@ -46,10 +46,10 @@ function init() {
 		waves: 3.0,
 		complex: 0.65,
 		displace: 0.5,
-		eqcolor: 9.5,
-		rcolor: 1.5,
-		gcolor: 1.5,
-		bcolor: 1.5,
+		eqcolor: 7.0,
+		rcolor: 0.0,
+		gcolor: 1.3,
+		bcolor: 1.8,
 		points: true,
 		ease: Quart.easeInOut
 	}, thirdDelay/1000);
