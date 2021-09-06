@@ -46,10 +46,10 @@ function init() {
 		waves: 3.0,
 		complex: 0.65,
 		displace: 0.5,
-		eqcolor: 7.0,
+		eqcolor: 8.0,
 		rcolor: 0.0,
-		gcolor: 1.3,
-		bcolor: 1.8,
+		gcolor: 1.4,
+		bcolor: 2.5,
 		points: true,
 		ease: Quart.easeInOut
 	}, thirdDelay/1000);
