@@ -19,13 +19,13 @@ function init() {
 
 	tl.to(options.perlin, {
 		size: 1.2,
-		waves: 0.6,
-		complex: 1.0,
-		displace: 0.3,
-		eqcolor: 30.0,
-		rcolor: 1.2,
-		gcolor: 0.1,
-		bcolor: 1.0,
+		waves: 3.7,
+		complex: 0.5,
+		displace: 1.0,
+		eqcolor: 21.0,
+		rcolor: 1.4,
+		gcolor: 0.0,
+		bcolor: 1.4,
 		ease: Quart.easeInOut
 	}, firstDelay/1000)
 	tl.to(options.perlin, {
