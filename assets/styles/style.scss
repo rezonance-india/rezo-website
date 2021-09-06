@@ -1,0 +1,169 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+$bg-color: hsl(250, 13%, 18%);
+$font-color: hsl(0, 0%, 100%);
+$amount:4%;
+
+html,
+body,
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	color: #FFFFFF;
+	margin: 0;
+	text-align: center;
+	background: radial-gradient(circle, transparent 50%, black 150%),$bg-color;
+	font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+
+canvas {
+	z-index:-5;
+	position:absolute;
+	top:0;
+	left:0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	opacity: 0.5;
+}
+
+p {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+a,
+a:hover,
+a:visited {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+#container{
+	min-height: 100vh;
+	display:flex;
+	align-items: center;
+	justify-content: center;
+}
+
+h1{
+	font-size: 3rem;
+}
+
+header {
+	position: fixed;
+	top:0;
+	width: 75%;
+	margin: 1rem 0;
+	@media only screen and (max-width: 768px) {
+		width: 100%
+	}
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	@media only screen and (max-width: 768px) {
+		display: block;
+	}
+}
+
+ul {
+	color: $font-color;
+	text-decoration: none;
+	@media only screen and (max-width: 768px) {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	border-radius: 0.25rem;
+	transition: all 0.2s ease;
+
+	&:hover {
+		border-radius: 0.25rem;
+		color: darken($font-color, math.div($amount,2));
+		background: darken($bg-color, $amount);
+	}
+}
+
+.logo-container{
+	position: absolute;
+	display:flex;
+	align-items: center;
+	font-size: 1.2rem;
+	padding: 0.75rem;
+	font-weight: 500;
+}
+
+.logo {
+	margin: 0 0.75rem;
+	height: 2rem;
+}
+
+.header-container{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.icon{
+	display: none;
+	@media only screen and (max-width: 768px) {
+		display: flex;
+		justify-content: flex-end;
+		padding: 0.75rem 1rem;
+	}
+}
+
+.hide{
+	@media only screen and (max-width: 768px) {
+		animation: float-to-right 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+		forwards;
+	}
+}
+
+.show{
+	animation: float-from-right 0.2s cubic-bezier(0.68, -0.55, 0.27, 1.55)	;
+}
+
+@keyframes float-from-right {
+	0%{
+		transform: translateX(100px);
+	}
+	100%{
+		transform: translateX(0);
+	}
+}
+
+@keyframes float-to-right {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(100px);
+		display: none;
+	}
+}

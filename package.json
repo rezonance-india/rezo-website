@@ -1,0 +1,19 @@
+{
+  "name": "rezo-website",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^2.5.2"
+  },
+  "dependencies": {
+    "gsap": "^3.7.1",
+    "particles.js": "^2.0.0",
+    "sass": "^1.39.0",
+    "three": "^0.132.2",
+    "typewriter-effect": "^2.18.0"
+  }
+}
