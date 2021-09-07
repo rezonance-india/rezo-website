@@ -9,7 +9,7 @@ typewriter
 	.pauseFor(2500)
 	.deleteAll()
 	.changeDelay(75)
-	.typeString('Premium sound quality for FREE')
+	.typeString('Premium quality sound for FREE')
 	.pauseFor(2500)
 	.deleteAll()
 	.changeDelay(500)

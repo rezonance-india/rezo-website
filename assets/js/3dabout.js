@@ -1,57 +1,11 @@
 import * as THREE from "three"
-import { gsap,Quart } from "gsap";
+import { gsap, Quart } from "gsap";
 
 window.addEventListener('load', init, false);
 function init() {
 	createWorld();
 	createPrimitive();
 	animation();
-	var tl = gsap.timeline();
-	let firstDelay = 4250
-	let secondDelay = 9500
-	let thirdDelay = 16500
-	setTimeout(() => {
-		options.perlin.redhell = false;
-	}, firstDelay);
-	setTimeout(() => {
-		options.perlin.redhell = true;
-	}, secondDelay);
-
-	tl.to(options.perlin, {
-		size: 1.2,
-		waves: 3.7,
-		complex: 0.5,
-		displace: 1.0,
-		eqcolor: 21.0,
-		rcolor: 1.4,
-		gcolor: 0.0,
-		bcolor: 1.4,
-		ease: Quart.easeInOut
-	}, firstDelay/1000)
-	tl.to(options.perlin, {
-		speed: 0.5,
-		size: 1.0,
-		waves: 20.0,
-		complex: 0.1,
-		displace: 0.1,
-		eqcolor: 10.0,
-		rcolor: 1.5,
-		gcolor: 1.5,
-		bcolor: 2.5,
-		ease: Quart.easeInOut
-	}, secondDelay/1000);
-	tl.to(options.perlin, {
-		speed: 0.4,
-		size: 1.0,
-		waves: 3.0,
-		complex: 0.65,
-		displace: 0.5,
-		eqcolor: 8.0,
-		rcolor: 0.0,
-		gcolor: 1.4,
-		bcolor: 2.5,
-		ease: Quart.easeInOut
-	}, thirdDelay/1000);
 }
 
 var Theme = {
@@ -175,20 +129,20 @@ function createPrimitive() {
 
 var options = {
 	perlin: {
-		speed: 0.4,
-		size: 1.25,
+		speed: 0.5,
+		size: 1.3,
 		perlins: 1.0,
 		decay: 1.20,
-		displace: 0.5,
-		complex: 0.65,
-		waves: 3.0,
-		eqcolor: 9.0,
-		rcolor: 0.4,
-		gcolor: 0.1,
-		bcolor: 0.5,
+		displace: 0.7,
+		complex: 0.8,
+		waves: 11.0,
+		eqcolor: 8.0,
+		rcolor: 0.0,
+		gcolor: 1.4,
+		bcolor: 2.5,
 		fragment: true,
-		points: false,
-		redhell: false
+		points: true,
+		redhell: true
 	},
 }
 
