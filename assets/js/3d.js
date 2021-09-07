@@ -50,6 +50,7 @@ function init() {
 		rcolor: 0.0,
 		gcolor: 1.4,
 		bcolor: 2.5,
+		points:true,
 		ease: Quart.easeInOut
 	}, thirdDelay/1000);
 }
