@@ -382,7 +382,18 @@
 			let x = document.querySelector("#nav-links");
 			x.classList.toggle("hide")
 			x.classList.toggle("show")
+			if(x.classList.contains("hide")){
+				setTimeout(function() {
+					x.style.display = "none"
+				}, 200);
+			}
+			else{
+				setTimeout(function() {
+				x.style.display = "flex"
+				}, 200);
+			}
 		}
+		document.querySelector("#nav-links").style.display = "none"
 	</script>
 </body>
 
