@@ -374,6 +374,7 @@ $neu-05: #403E3E;
 .hide {
 	@media only screen and (max-width: 768px) {
 		animation: float-to-right 0.2s $transition forwards;
+		display: none;
 	}
 }
 
