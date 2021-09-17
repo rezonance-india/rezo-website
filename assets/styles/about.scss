@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
 
+$transition: cubic-bezier(0.68, -0.55, 0.27, 1.55);
+
 @mixin lg {
 	@media screen and (max-width: 1180px) {
 		@content;
@@ -367,4 +369,34 @@ $neu-05: #403E3E;
 
 .main-container{
 	margin: 8rem 0;
+}
+
+.hide {
+	@media only screen and (max-width: 768px) {
+		animation: float-to-right 0.2s $transition forwards;
+	}
+}
+
+.show {
+	animation: float-from-right 0.2s $transition forwards;
+}
+
+@keyframes float-from-right {
+	0% {
+		transform: translateX(200px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes float-to-right {
+	0% {
+		transform: translateX(0);
+	}
+
+	100% {
+		transform: translateX(200px);
+	}
 }
